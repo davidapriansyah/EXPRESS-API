@@ -4,8 +4,8 @@
  */
 exports.seed = async function(knex) {
   // Deletes ALL existing entries
-  await knex('table_name').del()
-  await knex('table_name').insert([
+  await knex('categories').del()
+  await knex('categories').insert([
     { category_name: "Elektronik", category_code: "ELEC" },
     { category_name: "Fashion", category_code: "FASH" },
     { category_name: "Makanan", category_code: "FOOD" },

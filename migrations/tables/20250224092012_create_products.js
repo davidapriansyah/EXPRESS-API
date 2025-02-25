@@ -8,7 +8,7 @@ exports.up = function(knex) {
         table.string("product_name").notNullable().index()
         table.string("product_image").notNullable()
         table.integer("stock").notNullable()
-        table.decimal("price").notNullable()
+        table.decimal("price", 10,2).notNullable()
         table.integer("category_id").notNullable()
         table.foreign("category_id").references("id").inTable("categories").onDelete("CASCADE")
     })

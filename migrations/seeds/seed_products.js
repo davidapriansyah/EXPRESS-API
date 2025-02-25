@@ -4,16 +4,16 @@
  */
 exports.seed = async function(knex) {
   // Deletes ALL existing entries
-  await knex('table_name').del()
+  await knex('products').del()
 
   //ambil id dari categories
   const categories = await knex('categories').select('id')
-  await knex('table_name').insert([
+  await knex('products').insert([
     {
       product_name: "Laptop ASUS",
       product_image: "https://example.com/laptop.jpg",
       stock: 10,
-      price: 15000000,
+      price: 150000,
       category_id: categories[0].id, // Elektronik
     },
     {
